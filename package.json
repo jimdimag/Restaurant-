@@ -1,0 +1,11 @@
+{
+  "name": "rest",
+  "version": "0.0.1",
+  "description": "A site to use at restaurants to review it.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "James DiMaggio"
+}

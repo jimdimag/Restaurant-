@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Restaurant Buddy</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <h2 class="tagline"></h2>
+        
+        <section class="pixgrid rclick">
+  <!-- TODO:  add images of meals here -->          
+        </section>
+        <section class="ontour">
+        <div class="container">
+            <h1>Reviews</h1>
+            <article id="reviews"></article>
+        </div>
+        </section>
+        
+     <script src="js/script.js"></script> 
+     <script id="reviews" type="text/template">
+         {{#reviews}}
+         <div class="review">
+             <h2>{{restaurant}}</h2>
+             <h3>{{address}}</h3>
+             <p><img src="images/rest/{{shortname}}_tn.jpg" alt="Photo of restaurant" /></p>
+         </div>
+         {{reviews}}
+     </script>  
+    </body>
+</html>
