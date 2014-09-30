@@ -1,7 +1,8 @@
 // _base.scss
 // ==============
 body {
-  background: lighten($beige, 10%);
+  //background: lighten($beige, 10%);
+ background-image: url('images/flaming.jpg');
   font-family: $bodyFont;
   font-size: 1.1em;
 }

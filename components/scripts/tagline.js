@@ -4,6 +4,6 @@ $ = require('jquery');
 
 (fill = function(item) {
   return $('.tagline').append("" + item);
-})('See what others say before you order');
+})('Your reminder of what you like and where');
 
 fill;
