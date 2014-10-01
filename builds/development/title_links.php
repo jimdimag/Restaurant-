@@ -14,11 +14,11 @@ $result = $conn->query($query) or die("Unable to verify user because : " . mysql
 //this is where the actual verification happens
     if(mysqli_num_rows($result) == 1){
         $user = $result->fetch_assoc();
-        $_SESSION['userName'] = $user['username'];
+        $_SESSION['fname'] = $user['fname'];
         $_SESSION['userId'] = $user['u.id'];
-        
+        $userId = $_SESSION['userId'];
     
-    $userId = $_SESSION['userId'];
+    header('Location: return.php');
   }else{
         echo "<p><h3> Oops. Incorrect username / password. Try again! </h3></p>";
     }
@@ -48,5 +48,6 @@ $result = $conn->query($query) or die("Unable to verify user because : " . mysql
             <label>Confirm Password:</label> <input type="password"id="pass" /><br>
             <button id="register">Register</button>
         </form>
+        <div id="message"></div>
     </div>
 </div>
