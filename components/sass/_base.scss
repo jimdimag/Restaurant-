@@ -1,12 +1,14 @@
 // _base.scss
 // ==============
 body {
-  //background: lighten($beige, 10%);
- background-image: url('images/flaming.jpg');
+  //background: lighten($beige, 10%); 
+  background: url('../images/logo.png') no-repeat top center;
   font-family: $bodyFont;
   font-size: 1.1em;
 }
- 
+.back {
+  
+}
 #content {
   color: $pink;
   font-size: 2em;

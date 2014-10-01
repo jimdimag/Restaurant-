@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     minifyHTML = require('gulp-minify-html'),
     jsonminify = require('gulp-jsonminify'),
+    
     concat = require('gulp-concat');
 
 var env,
@@ -36,6 +37,7 @@ jsSources = [
     'components/scripts/rclick.js',
     'components/scripts/pixgrid.js',
     'components/scripts/tagline.js',
+    'components/scripts/rest.js',
     'components/scripts/template.js'
 ];
 sassSources = ['components/sass/style.scss'];
@@ -76,6 +78,7 @@ gulp.task('watch', function(){
    gulp.watch('components/sass/*.scss', ['compass']);
    gulp.watch('builds/development/*.html', ['html']);
    gulp.watch('builds/development/*.json', ['json']);
+   gulp.watch('builds/development/images/**/*.*', ['images']);
    gulp.watch(phpSources, ['php']);
 });
 
@@ -92,9 +95,13 @@ gulp.task('html', function() {
    .pipe(connect.reload())
 });
 gulp.task('php', function() {
-   gulp.src(phpSources)
+   gulp.src('builds/development/*.php')
+   .pipe(gulpif(env === 'production', gulp.dest(outputDir)))
    .pipe(connect.reload())
 });
+
+
+
 gulp.task('json', function() {
    gulp.src('builds/development/js/*.json')
    .pipe(gulpif(env === 'production', jsonminify()))

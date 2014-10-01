@@ -5,8 +5,7 @@
         <title>Restaurant Concierge</title>
         <link rel="stylesheet" href="css/style.css" />
     </head>
-    <body>
-        <div class="back">
+    <body><div class="back">
         <section class="city">
     <div class="container">
         <div class="logo">
@@ -14,6 +13,7 @@
      </div>
     </div>
   </section>
+  
         <h2 class="tagline"></h2>
         
         <section class="pixgrid rclick">
@@ -36,7 +36,7 @@
              <p><img src="rest/images/{{shortname}}_tn.jpg" alt="Photo of restaurant" /></p>
          </div>
          {{reviews}}
-     </script>  
-     </div>
+     </script>
+     </div>  
     </body>
 </html>

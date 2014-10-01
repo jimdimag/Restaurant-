@@ -66,18 +66,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 3, ../components/sass/_base.scss */
 body {
-  background-image: url("images/flaming.jpg");
+  background: url("../images/logo.png") no-repeat top center;
   font-family: "Inika", serif;
   font-size: 1.1em;
 }
 
-/* line 10, ../components/sass/_base.scss */
+/* line 12, ../components/sass/_base.scss */
 #content {
   color: #CC8E94;
   font-size: 2em;
 }
 
-/* line 15, ../components/sass/_base.scss */
+/* line 17, ../components/sass/_base.scss */
 .container {
   width: 90%;
   max-width: 1000px;
@@ -85,32 +85,32 @@ body {
   position: relative;
 }
 
-/* line 22, ../components/sass/_base.scss */
+/* line 24, ../components/sass/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Patua One", sans-serif;
   font-size: 3em;
 }
 
-/* line 27, ../components/sass/_base.scss */
+/* line 29, ../components/sass/_base.scss */
 h1 {
   font-size: 3.5em;
   margin-bottom: 10px;
   color: #507356;
 }
 @media (max-width: 700px) {
-  /* line 27, ../components/sass/_base.scss */
+  /* line 29, ../components/sass/_base.scss */
   h1 {
     font-size: 2.2em;
   }
 }
 
-/* line 37, ../components/sass/_base.scss */
+/* line 39, ../components/sass/_base.scss */
 h2 {
   font-size: 1.5em;
   color: #3E2B3D;
 }
 
-/* line 42, ../components/sass/_base.scss */
+/* line 44, ../components/sass/_base.scss */
 p {
   font-size: 1.3em;
   line-height: 1.5em;
@@ -119,7 +119,7 @@ p {
   margin-top: 15px;
 }
 
-/* line 50, ../components/sass/_base.scss */
+/* line 52, ../components/sass/_base.scss */
 section {
   padding: 20px 0;
 }
@@ -131,90 +131,61 @@ section {
   clear: both;
 }
 
-/* line 3, ../components/sass/_modules.scss */
-.city {
-  background: url("../images/backgrounds/seattle_skyline.jpg") no-repeat 50% 20%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-@media (min-width: 801px) {
-  /* line 3, ../components/sass/_modules.scss */
-  .city {
-    height: 350px;
-  }
-}
-@media (max-width: 800px) {
-  /* line 3, ../components/sass/_modules.scss */
-  .city {
-    height: 150px;
-  }
-}
-@media (max-width: 300px) {
-  /* line 3, ../components/sass/_modules.scss */
-  .city {
-    height: 100px;
-  }
-}
 /* line 5, ../components/sass/_modules.scss */
-.city img.logo {
+.city .logo {
   position: absolute;
   right: 0;
   top: 0;
   width: 50%;
   max-width: 450px;
   min-width: 250px;
+  text-decoration: none;
 }
 
-/* line 15, ../components/sass/_modules.scss */
+/* line 16, ../components/sass/_modules.scss */
 .featuredartists {
   background: #8D8862;
   border-top: 20px solid #E3C691;
   border-bottom: 50px solid #507356;
 }
-/* line 20, ../components/sass/_modules.scss */
+/* line 21, ../components/sass/_modules.scss */
 .featuredartists h1 {
   font-size: 3em;
   color: #263729;
 }
 @media (max-width: 700px) {
-  /* line 20, ../components/sass/_modules.scss */
+  /* line 21, ../components/sass/_modules.scss */
   .featuredartists h1 {
     font-size: 2em;
   }
 }
-/* line 28, ../components/sass/_modules.scss */
+/* line 29, ../components/sass/_modules.scss */
 .featuredartists h2 {
   margin-top: 20px;
   font-size: 1.8em;
   color: #dbb570;
 }
 @media (max-width: 700px) {
-  /* line 28, ../components/sass/_modules.scss */
+  /* line 29, ../components/sass/_modules.scss */
   .featuredartists h2 {
     display: none;
   }
 }
-/* line 37, ../components/sass/_modules.scss */
+/* line 38, ../components/sass/_modules.scss */
 .featuredartists p {
   color: #314634;
 }
-/* line 41, ../components/sass/_modules.scss */
+/* line 42, ../components/sass/_modules.scss */
 .featuredartists .artistlist {
   padding-bottom: 20px;
 }
-/* line 44, ../components/sass/_modules.scss */
+/* line 45, ../components/sass/_modules.scss */
 .featuredartists .artistlist h2 {
   margin-top: 5px;
   font-size: 1.2em;
   color: #ebd7b2;
 }
-/* line 50, ../components/sass/_modules.scss */
+/* line 51, ../components/sass/_modules.scss */
 .featuredartists .artistlist .item {
   min-width: 95px;
   color: #6f6b4d;
@@ -224,7 +195,7 @@ section {
   text-align: center;
   position: relative;
 }
-/* line 59, ../components/sass/_modules.scss */
+/* line 60, ../components/sass/_modules.scss */
 .featuredartists .artistlist .item > img {
   max-width: 130px;
   margin: 0 auto;
@@ -235,7 +206,7 @@ section {
   width: 100%;
 }
 
-/* line 70, ../components/sass/_modules.scss */
+/* line 71, ../components/sass/_modules.scss */
 .potterypix {
   background: url("../images/backgrounds/pottery_workshop.jpg") no-repeat 50% 20%;
   -webkit-background-size: cover;
@@ -249,30 +220,30 @@ section {
   border-bottom: 50px solid #8D8862;
 }
 @media (min-width: 801px) {
-  /* line 70, ../components/sass/_modules.scss */
+  /* line 71, ../components/sass/_modules.scss */
   .potterypix {
     height: 350px;
   }
 }
 @media (max-width: 800px) {
-  /* line 70, ../components/sass/_modules.scss */
+  /* line 71, ../components/sass/_modules.scss */
   .potterypix {
     height: 150px;
   }
 }
 @media (max-width: 300px) {
-  /* line 70, ../components/sass/_modules.scss */
+  /* line 71, ../components/sass/_modules.scss */
   .potterypix {
     height: 100px;
   }
 }
 
-/* line 76, ../components/sass/_modules.scss */
+/* line 77, ../components/sass/_modules.scss */
 .aboutvenue img {
   float: right;
 }
 
-/* line 81, ../components/sass/_modules.scss */
+/* line 82, ../components/sass/_modules.scss */
 .workshoppix {
   background: url("../images/backgrounds/woodworking_workshop.jpg") no-repeat 50% 20%;
   -webkit-background-size: cover;
@@ -286,45 +257,45 @@ section {
   border-bottom: 50px solid #8D8862;
 }
 @media (min-width: 801px) {
-  /* line 81, ../components/sass/_modules.scss */
+  /* line 82, ../components/sass/_modules.scss */
   .workshoppix {
     height: 350px;
   }
 }
 @media (max-width: 800px) {
-  /* line 81, ../components/sass/_modules.scss */
+  /* line 82, ../components/sass/_modules.scss */
   .workshoppix {
     height: 150px;
   }
 }
 @media (max-width: 300px) {
-  /* line 81, ../components/sass/_modules.scss */
+  /* line 82, ../components/sass/_modules.scss */
   .workshoppix {
     height: 100px;
   }
 }
 
-/* line 87, ../components/sass/_modules.scss */
+/* line 88, ../components/sass/_modules.scss */
 .ontour h1 {
   color: #4d354c;
   font-size: 3em;
   bottom: 10px;
   right: 10%;
 }
-/* line 94, ../components/sass/_modules.scss */
+/* line 95, ../components/sass/_modules.scss */
 .ontour h2 {
   font-size: 1.8em;
   color: #8D8862;
   border-top: 1px solid #8D8862;
   padding-top: 5px;
 }
-/* line 101, ../components/sass/_modules.scss */
+/* line 102, ../components/sass/_modules.scss */
 .ontour h3 {
   font-size: 1.3em;
   color: #6b4a69;
   padding-bottom: 5px;
 }
-/* line 107, ../components/sass/_modules.scss */
+/* line 108, ../components/sass/_modules.scss */
 .ontour img {
   float: right;
   -moz-border-radius: 50%;

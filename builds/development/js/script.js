@@ -77,9 +77,20 @@ $ = require('jquery');
 
 (fill = function(item) {
   return $('.tagline').append("" + item);
-})('Your reminder of what you like and where');
+})('Your reminder of what you like and where you go it from');
 
 fill;
+
+$("#sign").hide();
+$("#reg").hide();
+
+$("#signIn").click(function(){
+    $("#sign").fadeToggle("slow");
+});
+$("#make").click(function(){
+    $("#reg").fadeToggle("slow");
+    $("#fname").focus();
+});
 
 $(function() {
   var Mustache = require('mustache');

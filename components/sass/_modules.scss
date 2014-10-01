@@ -1,14 +1,15 @@
 // _modules.scss
 // ============
 .city {
-  @include backImage('../images/backgrounds/seattle_skyline.jpg');
-  img.logo {
+  //@include backImage('../images/logo.png');
+  .logo {
     position: absolute;
     right: 0;
     top: 0;
     width: 50%;
     max-width: 450px;
     min-width: 250px;
+    text-decoration: none;
   } //logo
 } //city
  
@@ -113,3 +114,4 @@
     max-width: 160px;
   } //img
 } //ontour
+
