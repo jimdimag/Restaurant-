@@ -34,11 +34,11 @@ if (env==='development') {
 
 coffeeSources = ['components/coffee/tagline.coffee'];
 jsSources = [
-    'components/scripts/rclick.js',
     'components/scripts/pixgrid.js',
+    'components/scripts/rclick.js',
     'components/scripts/tagline.js',
-    'components/scripts/rest.js',
-    'components/scripts/template.js'
+    'components/scripts/remplate.js',
+    'components/scripts/rest.js'
 ];
 sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];

@@ -114,4 +114,14 @@
     max-width: 160px;
   } //img
 } //ontour
-
+#add input.error {
+  background: #FFA9B8;
+  border: 1px solid red;
+}
+#add label.error {
+  font-size:.08em;
+  color: #F00;
+  font-weight: bold;
+  display: block;
+  margin-left: 150px;
+}

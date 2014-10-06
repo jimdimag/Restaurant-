@@ -1,0 +1,105 @@
+CREATE TABLE IF NOT EXISTS users
+(
+u_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+fname varchar(255) NOT NULL,
+lname varchar(255) NOT NULL,
+username varchar(255) NOT NULL,
+password varchar(255) NOT NULL,
+email varchar(255) NOT NULL
+)
+
+
+CREATE TABLE IF NOT EXISTS ethnicity
+(
+e_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+ethnicity varchar(255) NOT NULL
+)
+
+
+
+CREATE TABLE IF NOT EXISTS restaurants
+(
+r_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+rname varchar(255) NOT NULL,
+e_id int NOT NULL,
+r_lat varchar(255),
+r_lon varchar(255),
+FOREIGN KEY (e_id) REFERENCES ethnicity(e_id)
+)
+
+
+
+CREATE TABLE IF NOT EXISTS apps
+(
+a_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+a_name varchar(255) NOT NULL
+)
+
+
+
+CREATE TABLE IF NOT EXISTS cocktail
+(
+c_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+c_name varchar(255) NOT NULL
+)
+
+
+
+CREATE TABLE IF NOT EXISTS main
+(
+m_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+m_name varchar(255) NOT NULL
+)
+
+
+
+CREATE TABLE IF NOT EXISTS desert
+(
+d_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+d_name varchar(255) NOT NULL
+)
+
+
+
+CREATE TABLE IF NOT EXISTS meals
+(
+meal_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+u_id int NOT NULL,
+r_id int NOt NULL,
+e_id int NOT NULL,
+c_id int,
+a_id int,
+m_id int NOT NULL,
+d_id int,
+FOREIGN KEY (u_id) REFERENCES users(u_id),
+FOREIGN KEY (e_id) REFERENCES ethnicity(e_id),
+FOREIGN KEY (r_id) REFERENCES restaurants(r_id),
+FOREIGN KEY (c_id) REFERENCES cocktail(c_id),
+FOREIGN KEY (a_id) REFERENCES apps(a_id),
+FOREIGN KEY (m_id) REFERENCES main(m_id),
+FOREIGN KEY (d_id) REFERENCES desert(d_id)
+)
+
+
+
+CREATE TABLE IF NOT EXISTS review
+(
+rev_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+u_id int NOT NULL,
+r_id int NOt NULL,
+review blob NOT NULL,
+FOREIGN KEY (u_id) REFERENCES users(u_id),
+FOREIGN KEY (r_id) REFERENCES restaurants(r_id)
+)
+
+
+CREATE TABLE IF NOT EXISTS sub_eth
+(
+sub_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+e_id int NOT NULL,
+item varchar(255) NOT NULL
+)
+
+****************************************************************************************************************
+INSERT INTO ethnicity (ethnicity) values ('American', 'Chinese', 'Japanese','Mexican')
+

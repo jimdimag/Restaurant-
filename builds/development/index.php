@@ -26,7 +26,7 @@
             <article id="reviews"></article>
         </div>
         </section>
-        
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.js"></script>  
      <script src="js/script.js"></script> 
      <script id="reviews" type="text/template">
          {{#reviews}}

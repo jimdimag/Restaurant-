@@ -307,6 +307,21 @@ section {
   max-width: 160px;
 }
 
+/* line 117, ../components/sass/_modules.scss */
+#add input.error {
+  background: #FFA9B8;
+  border: 1px solid red;
+}
+
+/* line 121, ../components/sass/_modules.scss */
+#add label.error {
+  font-size: .08em;
+  color: #F00;
+  font-weight: bold;
+  display: block;
+  margin-left: 150px;
+}
+
 /* line 4, ../components/sass/_pixgrid.scss */
 .pixgrid img {
   max-width: 90px;
