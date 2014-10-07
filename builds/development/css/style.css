@@ -71,13 +71,45 @@ body {
   font-size: 1.1em;
 }
 
-/* line 12, ../components/sass/_base.scss */
+/* line 9, ../components/sass/_base.scss */
+nav {
+  list-style-type: none;
+  display: inline;
+}
+/* line 14, ../components/sass/_base.scss */
+nav li {
+  display: inline;
+  float: left;
+}
+/* line 18, ../components/sass/_base.scss */
+nav ul ul li {
+  display: inline;
+  float: left;
+}
+/* line 22, ../components/sass/_base.scss */
+nav a:link, nav a:visited {
+  display: block;
+  width: 85px;
+  /*font-weight: bold;
+  color: #FFFFFF;
+  background-color: #98bf21;*/
+  text-align: center;
+  padding: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 33, ../components/sass/_base.scss */
+nav a:hover, nav a:active {
+  background-color: #97D5D9;
+}
+
+/* line 41, ../components/sass/_base.scss */
 #content {
   color: #CC8E94;
   font-size: 2em;
 }
 
-/* line 17, ../components/sass/_base.scss */
+/* line 46, ../components/sass/_base.scss */
 .container {
   width: 90%;
   max-width: 1000px;
@@ -85,32 +117,32 @@ body {
   position: relative;
 }
 
-/* line 24, ../components/sass/_base.scss */
+/* line 53, ../components/sass/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Patua One", sans-serif;
   font-size: 3em;
 }
 
-/* line 29, ../components/sass/_base.scss */
+/* line 58, ../components/sass/_base.scss */
 h1 {
   font-size: 3.5em;
   margin-bottom: 10px;
   color: #507356;
 }
 @media (max-width: 700px) {
-  /* line 29, ../components/sass/_base.scss */
+  /* line 58, ../components/sass/_base.scss */
   h1 {
     font-size: 2.2em;
   }
 }
 
-/* line 39, ../components/sass/_base.scss */
+/* line 68, ../components/sass/_base.scss */
 h2 {
   font-size: 1.5em;
   color: #3E2B3D;
 }
 
-/* line 44, ../components/sass/_base.scss */
+/* line 73, ../components/sass/_base.scss */
 p {
   font-size: 1.3em;
   line-height: 1.5em;
@@ -119,7 +151,7 @@ p {
   margin-top: 15px;
 }
 
-/* line 52, ../components/sass/_base.scss */
+/* line 81, ../components/sass/_base.scss */
 section {
   padding: 20px 0;
 }

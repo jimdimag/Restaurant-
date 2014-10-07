@@ -100,6 +100,13 @@ e_id int NOT NULL,
 item varchar(255) NOT NULL
 )
 
+
+CREATE TABLE IF NOT EXISTS sTables
+(
+table_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+tables varchar(255) NOT NULL
+)
+
 ****************************************************************************************************************
 INSERT INTO ethnicity (ethnicity) values ('American', 'Chinese', 'Japanese','Mexican')
 

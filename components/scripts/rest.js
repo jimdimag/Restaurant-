@@ -2,6 +2,7 @@ $("#sign").hide();
 $("#reg").hide();
 $("#sub").hide();
 $("#food").hide();
+$(".dropnav").hide();
 
 $("#signIn").click(function(){
     $("#sign").fadeToggle("slow");
@@ -14,46 +15,14 @@ $("#make").click(function(){
 /**
  *register form validation 
  */
-/*$("#add").validate({
-    rules: {
-        fname: 'required',
-        lname: 'required',
-        email: {
-            required: true,
-            email: true
-                },
-        username:'required',
-        password: {
-            required: true,
-            rangelength: [8,16]
-        },
-        confirm:{
-            equalTo:'#pass'
+$("form#add").submit(function() {
+        
+        //make sure required fields have content
+        if (($("input:#fname").val() == "") || ($("input:#lname").val() == "") || ($("input:#username").val() == "") || ($("input:#email").val() == "") || ($("input:#pass").val() == "")) {    
+            return false;
         }
-    }, //END OF RULES
-    messages: {
-        fname: {
-            required: "Please enter your first name"
-        },
-        lname: {
-            required: "Please enter your last name"
-        },
-        email: {
-            required: "Please enter your email address (in case you forget it later on)",
-            email: "Please enter a valid email address"
-        },
-        username: {
-            required: "Please enter a username."
-        },
-        password: {
-            required: "Please enter a password",
-            rangelength: "Password must be between 8 and 16 characters long."
-        },
-        confirm: {
-            equalTo: "The two passwords do not match"
-        }
-    }, // END OF MESSAGES
-});*/
+        return true;
+    });
 /**
  *register a new user 
  */
@@ -108,3 +77,30 @@ $("#craving").change(function() {
         } //END OF SUCCESS
 	});
 }); //END OF CRAVING CHANGE FUNCTION
+
+/**
+ *find a specific item  
+ */
+$("#specific").click(function() {
+    $.ajax({
+        type: "POST",
+        async: true,
+        url: "sub.php",
+        dataType:"json",
+        data: ({cat: $('#search').val(), item:$("#find").val()}),
+        success: function(data) {
+            
+        } //END OF SUCCESS
+    }); // END OF AJAX
+}); // END OF CLICK FUNCT.
+
+
+/**
+ *dropdown navigation area 
+ */
+var $target = $("nav > ul > li");
+        $target.hover(function (e) {
+   $('> .dropnav', this).slideDown();
+},function () {
+   $('> .dropnav', this).fadeOut();
+});

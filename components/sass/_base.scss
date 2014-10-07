@@ -6,6 +6,35 @@ body {
   font-family: $bodyFont;
   font-size: 1.1em;
 }
+nav {
+  list-style-type: none;
+  display: inline;
+  
+  
+   li {
+    display: inline;
+    float: left
+}
+ul ul li {
+    display: inline;
+    float: left
+}
+a:link, a:visited {
+    display: block;
+    width: 85px;
+    /*font-weight: bold;
+    color: #FFFFFF;
+    background-color: #98bf21;*/
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a:hover, a:active {
+    background-color: $lightBlue;
+}
+
+}
 .back {
   
 }
